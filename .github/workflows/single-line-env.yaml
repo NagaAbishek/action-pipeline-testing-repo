@@ -1,4 +1,4 @@
-name: Test environment deploy
+name: second Test environment deploy
 
 run-name: Deploy to ${{ github.event.inputs.environment }}
 
