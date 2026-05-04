@@ -1,0 +1,23 @@
+name: Test environment deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment (dev or test)'
+        required: true
+        default: 'test'
+        type: choice
+        options:
+          - dev
+          - test
+
+jobs:
+  show-env:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show selected environment
+        run: |
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Branch: ${{ github.ref_name }}"
