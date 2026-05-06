@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show selected environment
+      - name: Environment
         run: |
           echo "Environment: ${{ github.event.inputs.environment }}"
           echo "Branch: ${{ github.ref_name }}"
