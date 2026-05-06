@@ -20,4 +20,4 @@ jobs:
       - name: Environment
         run: |
           echo "Environment: ${{ github.event.inputs.environment }}"
-          echo "Branch: ${{ github.ref_name }}"
+          echo "Branch     : ${{ github.ref_name }}"
